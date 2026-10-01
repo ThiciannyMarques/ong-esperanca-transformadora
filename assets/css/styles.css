@@ -659,20 +659,6 @@ select:user-invalid {
   margin-top: 0.5rem;
 }
 
-.form-mensagem {
-  margin-top: 1.25rem;
-  padding: 1rem 1.25rem;
-  background-color: var(--verde-100);
-  color: #14553b;
-  border-left: 6px solid var(--verde-700);
-  border-radius: var(--raio-sm);
-  font-weight: 700;
-}
-
-.form-mensagem[hidden] {
-  display: none;
-}
-
 .site-footer {
   margin-top: 2rem;
   padding-block: 3.5rem 1.5rem;
