@@ -6,9 +6,6 @@
   <meta name="description" content="Cadastre-se como voluntário ou doador da ONG Esperança Transformadora.">
   <title>Cadastro de Voluntários e Doadores | ONG Esperança Transformadora</title>
   <link rel="icon" type="image/png" href="assets/images/logo.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Poppins:wght@600;700;800&display=swap">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
@@ -17,7 +14,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="logo-link" href="index.html">
-        <img src="assets/images/logo.png" width="56" height="56" alt="Logotipo da ONG Esperança Transformadora: um coração azul e verde com uma folha laranja brotando, simbolizando renovação e cuidado">
+        <img src="assets/images/logo.png" width="512" height="512" alt="Logotipo da ONG Esperança Transformadora: seis mãos de diferentes tons de pele entrelaçadas em círculo, simbolizando união e solidariedade">
         <span>Esperança Transformadora</span>
       </a>
       <nav aria-label="Navegação Principal">
@@ -36,7 +33,7 @@
         <h1 id="titulo-form">Formulário de Engajamento e Apoio</h1>
         <p class="form-nota">Preencha os dados abaixo para se tornar voluntário ou doador. Os campos marcados com <span class="obrigatorio" aria-hidden="true">*</span><span class="visually-hidden"> asterisco</span> são obrigatórios.</p>
 
-        <form class="form-card" action="#" method="post">
+        <form id="form-cadastro" class="form-card" action="#" method="post">
           <fieldset>
             <legend>Dados Pessoais</legend>
             <div class="campos-grid">
@@ -140,6 +137,7 @@
             <button type="submit" class="btn">Enviar cadastro</button>
             <button type="reset" class="btn btn-contorno-escuro">Limpar formulário</button>
           </div>
+          <div id="mensagem-sucesso" class="form-mensagem" role="status" tabindex="-1" hidden>Obrigado! Seu cadastro foi recebido. Entraremos em contato em breve.</div>
         </form>
       </div>
     </section>
@@ -170,5 +168,6 @@
     </div>
   </footer>
 
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
