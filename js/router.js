@@ -2,6 +2,7 @@ import { rotas, rotaNaoEncontrada } from "./paginas/index.js";
 
 const TITULO_SITE = "ONG Esperança Transformadora";
 const principal = document.getElementById("conteudo");
+let navegacaoAtual = 0;
 
 function lerHash() {
   const caminho = window.location.hash.replace(/^#\/?/, "");
@@ -39,15 +40,24 @@ async function navegar() {
   const { rota, ancora } = lerHash();
   const pagina = rotas[rota] || rotaNaoEncontrada;
 
+  const identificador = ++navegacaoAtual;
+  let conteudo;
+
   principal.setAttribute("aria-busy", "true");
 
   try {
-    principal.innerHTML = await carregarFragmento(pagina.arquivo);
+    conteudo = await carregarFragmento(pagina.arquivo);
   } catch (erro) {
-    principal.innerHTML =
+    conteudo =
       '<section class="intro-pagina"><div class="container"><h1>Não foi possível carregar a página</h1>' +
       "<p>Verifique sua conexão e tente novamente.</p></div></section>";
   }
+
+  if (identificador !== navegacaoAtual) {
+    return;
+  }
+
+  principal.innerHTML = conteudo;
 
   document.title = pagina.titulo + " | " + TITULO_SITE;
   marcarMenu(rotas[rota] ? rota : null);

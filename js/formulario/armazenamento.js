@@ -22,7 +22,9 @@ function gravar(chave, valor) {
 }
 
 export function listarCadastros() {
-  return ler(CHAVE_CADASTROS, []);
+  const lista = ler(CHAVE_CADASTROS, []);
+
+  return Array.isArray(lista) ? lista : [];
 }
 
 export function salvarCadastro(dados) {
@@ -49,7 +51,9 @@ export function removerCadastro(id) {
 }
 
 export function lerRascunho() {
-  return ler(CHAVE_RASCUNHO, {});
+  const rascunho = ler(CHAVE_RASCUNHO, {});
+
+  return rascunho && typeof rascunho === "object" && !Array.isArray(rascunho) ? rascunho : {};
 }
 
 export function salvarRascunho(dados) {
