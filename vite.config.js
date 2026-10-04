@@ -46,7 +46,8 @@ export default defineConfig({
   publicDir: false,
   build: {
     outDir: "dist",
-    emptyOutDir: true
+    emptyOutDir: true,
+    assetsInlineLimit: 0
   },
   plugins: [minificarIndex(), copiarRecursosEstaticos()]
 });

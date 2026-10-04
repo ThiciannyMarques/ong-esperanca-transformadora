@@ -50,6 +50,18 @@ python -m http.server 8080
 
 Depois, abra http://localhost:8080 no navegador. Com Node.js, o equivalente é `npx serve .`.
 
+## Otimização de imagens
+
+As imagens originais ficam em `imagens-fonte/`. O comando abaixo gera a pasta `imagens/` com versões otimizadas, usando o [sharp](https://sharp.pixelplumbing.com):
+
+```bash
+npm run imagens
+```
+
+- Cada ilustração é exportada em **WebP** (qualidade 78) e em **JPEG** otimizado como alternativa, em duas larguras (400 e 740 px) para as imagens de projetos.
+- O logotipo é reduzido para 96 px e comprimido como PNG de paleta.
+- O HTML usa `<picture>` com `srcset` e `sizes`, para o navegador escolher o arquivo certo, e `loading="lazy"` nas imagens abaixo da dobra.
+
 ## Build de produção
 
 O projeto usa o [Vite](https://vite.dev) para gerar a versão de produção. Pré-requisito: Node.js 20 ou superior.
