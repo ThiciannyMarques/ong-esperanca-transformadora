@@ -1,0 +1,91 @@
+<section class="intro-pagina" aria-labelledby="titulo-guia">
+  <div class="container">
+    <h1 id="titulo-guia">Guia de Componentes de Feedback</h1>
+    <p>Padrão visual dos badges, alertas, toasts e modais usados na plataforma. Todos seguem a paleta e a escala do Design System e podem ser reutilizados pelas próximas páginas e integrações.</p>
+  </div>
+</section>
+
+<section aria-labelledby="titulo-badges">
+  <div class="container">
+    <h2 id="titulo-badges">Badges</h2>
+    <p>Etiquetas curtas para categorizar informações, como a área e a situação de cada projeto.</p>
+    <p class="grupo-componentes">
+      <span class="badge badge-info">Educação</span>
+      <span class="badge badge-sucesso">Em andamento</span>
+      <span class="badge badge-aviso">Vagas limitadas</span>
+      <span class="badge badge-erro">Encerrado</span>
+      <span class="badge badge-neutro">Novo</span>
+    </p>
+  </div>
+</section>
+
+<section aria-labelledby="titulo-alertas">
+  <div class="container">
+    <h2 id="titulo-alertas">Alertas</h2>
+    <p>Mensagens fixas na página, para confirmar uma ação ou orientar a pessoa.</p>
+    <div class="grupo-alertas">
+      <div class="alerta alerta-sucesso" role="status">
+        <div>
+          <strong>Cadastro enviado</strong>
+          <p>Recebemos seus dados e entraremos em contato em breve.</p>
+        </div>
+      </div>
+      <div class="alerta alerta-erro" role="alert">
+        <div>
+          <strong>Não foi possível enviar</strong>
+          <p>Confira os campos destacados em vermelho e tente novamente.</p>
+        </div>
+      </div>
+      <div class="alerta alerta-aviso" role="status">
+        <div>
+          <strong>Atenção</strong>
+          <p>As vagas de voluntariado deste mês estão quase esgotadas.</p>
+        </div>
+      </div>
+      <div class="alerta alerta-info" role="status">
+        <div>
+          <strong>Informação</strong>
+          <p>As doações são recebidas por transferência bancária ou pelo cadastro nesta página.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="titulo-toasts">
+  <div class="container">
+    <h2 id="titulo-toasts">Toasts</h2>
+    <p>Notificações temporárias que aparecem no canto da tela sem bloquear a navegação e somem em poucos segundos.</p>
+    <p class="grupo-componentes">
+      <button type="button" class="btn btn-secundario" data-toast="sucesso" data-toast-texto="Cadastro enviado com sucesso!">Toast de sucesso</button>
+      <button type="button" class="btn btn-contorno-escuro" data-toast="erro" data-toast-texto="Não foi possível enviar o formulário.">Toast de erro</button>
+      <button type="button" class="btn btn-contorno-escuro" data-toast="aviso" data-toast-texto="Revise os dados antes de continuar.">Toast de aviso</button>
+      <button type="button" class="btn btn-contorno-escuro" data-toast="info" data-toast-texto="Novos projetos serão publicados em breve.">Toast informativo</button>
+    </p>
+  </div>
+</section>
+
+<section aria-labelledby="titulo-modal">
+  <div class="container">
+    <h2 id="titulo-modal">Modal</h2>
+    <p>Janela de informação que pede a atenção da pessoa. Fecha com o botão, com a tecla Esc ou ao confirmar.</p>
+    <p class="grupo-componentes">
+      <button type="button" class="btn" data-modal-abrir="modal-apoio">Abrir modal</button>
+    </p>
+  </div>
+</section>
+
+<dialog class="modal" id="modal-apoio" aria-labelledby="modal-apoio-titulo">
+  <div class="modal-cabecalho">
+    <h3 id="modal-apoio-titulo">Como apoiar a ONG</h3>
+    <button type="button" class="modal-fechar" data-modal-fechar aria-label="Fechar janela">&times;</button>
+  </div>
+  <div class="modal-corpo">
+    <p>Você pode contribuir como voluntário, doando recursos ou das duas formas. O cadastro leva poucos minutos e nossa equipe entra em contato para combinar os próximos passos.</p>
+  </div>
+  <div class="modal-rodape">
+    <button type="button" class="btn btn-contorno-escuro" data-modal-fechar>Agora não</button>
+    <a class="btn" href="#/cadastro">Quero me cadastrar</a>
+  </div>
+</dialog>
+  

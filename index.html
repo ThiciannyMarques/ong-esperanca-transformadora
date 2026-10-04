@@ -4,68 +4,48 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="ONG Esperança Transformadora: transformando vidas através da solidariedade e da educação.">
-  <title>ONG Esperança Transformadora | Início</title>
-  <link rel="icon" type="image/png" href="assets/images/logo.png">
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <title>ONG Esperança Transformadora</title>
+  <link rel="icon" type="image/png" href="imagens/logo.png">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
 
   <header class="site-header">
     <div class="container header-inner">
-      <a class="logo-link" href="index.html">
-        <img src="assets/images/logo.png" width="512" height="512" alt="Logotipo da ONG Esperança Transformadora: seis mãos de diferentes tons de pele entrelaçadas em círculo, simbolizando união e solidariedade">
+      <a class="logo-link" href="#/">
+        <img src="imagens/logo.png" width="512" height="512" alt="Logotipo da ONG Esperança Transformadora: seis mãos de diferentes tons de pele entrelaçadas em círculo, simbolizando união e solidariedade">
         <span>Esperança Transformadora</span>
       </a>
       <nav aria-label="Navegação Principal">
-        <ul class="nav-list">
-          <li><a href="index.html" aria-current="page">Início</a></li>
-          <li><a href="projetos.html">Projetos</a></li>
-          <li><a href="cadastro.html">Cadastro</a></li>
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="menu-principal">
+          <span class="nav-toggle-barras" aria-hidden="true"></span>
+          <span class="visually-hidden">Abrir menu</span>
+        </button>
+        <ul class="nav-list" id="menu-principal">
+          <li><a href="#/" data-rota="">Início</a></li>
+          <li class="tem-submenu">
+            <a href="#/projetos" data-rota="projetos">Projetos</a>
+            <ul class="submenu">
+              <li><a href="#/projetos/educacao">Educação para o Futuro</a></li>
+              <li><a href="#/projetos/prato-cheio">Prato Cheio</a></li>
+            </ul>
+          </li>
+          <li><a href="#/cadastro" data-rota="cadastro">Cadastro</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main id="conteudo">
-    <section class="hero" aria-labelledby="titulo-hero">
-      <div class="container hero-inner">
-        <div class="hero-texto">
-          <h1 id="titulo-hero">Transformando vidas através da solidariedade e da educação</h1>
-          <p>Cada gesto de generosidade abre portas para um futuro melhor. Junte-se a nós e ajude a construir oportunidades para crianças, jovens e famílias em situação de vulnerabilidade.</p>
-          <a class="btn" href="cadastro.html">Quero fazer parte</a>
+  <main id="conteudo" tabindex="-1">
+    <noscript>
+      <section class="intro-pagina">
+        <div class="container">
+          <h1>JavaScript necessário</h1>
+          <p>Esta plataforma usa JavaScript para montar as páginas. Ative-o no navegador para continuar.</p>
         </div>
-        <img src="assets/images/banner-home.jpg" width="597" height="350" alt="Ilustração de uma jovem protegendo uma senhora idosa da chuva com um guarda-chuva, em um parque">
-      </div>
-    </section>
-
-    <section class="sobre" aria-labelledby="titulo-sobre">
-      <div class="container">
-        <h2 id="titulo-sobre">Sobre Nós</h2>
-        <p>O terceiro setor reúne organizações privadas, sem fins lucrativos, que atuam em benefício da sociedade, complementando o trabalho do Estado e do mercado em áreas como educação, saúde, alimentação e cidadania. Essas entidades mobilizam pessoas, recursos e conhecimento para enfrentar desigualdades sociais.</p>
-        <p>A ONG Esperança Transformadora tem como missão promover a inclusão social e o desenvolvimento humano por meio de projetos de educação, segurança alimentar e fortalecimento comunitário, atuando com transparência, respeito e o apoio de voluntários e doadores.</p>
-      </div>
-    </section>
-
-    <section aria-labelledby="titulo-indicadores">
-      <div class="container">
-        <h2 id="titulo-indicadores">Nosso Impacto em Números</h2>
-        <div class="indicadores-grid">
-          <article class="indicador">
-            <span class="indicador-numero">+5.000</span>
-            <p class="indicador-texto">famílias atendidas</p>
-          </article>
-          <article class="indicador">
-            <span class="indicador-numero">12</span>
-            <p class="indicador-texto">projetos em andamento</p>
-          </article>
-          <article class="indicador">
-            <span class="indicador-numero">350</span>
-            <p class="indicador-texto">voluntários engajados</p>
-          </article>
-        </div>
-      </div>
-    </section>
+      </section>
+    </noscript>
   </main>
 
   <footer class="site-footer">
@@ -89,8 +69,10 @@
           <p>Telefone: <a href="tel:+551140028922">(11) 4002-8922</a></p>
         </div>
       </div>
-      <p class="copyright">&copy; 2025 ONG Esperança Transformadora. Todos os direitos reservados.</p>
+      <p class="copyright"><a href="#/componentes">Guia de componentes</a><br>&copy; 2025 ONG Esperança Transformadora. Todos os direitos reservados.</p>
     </div>
   </footer>
+
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>
