@@ -94,7 +94,7 @@ Não há testes automatizados neste projeto.
 
 ## Deploy
 
-O site é publicado pelo GitHub Pages a partir da branch `main`, na raiz do repositório (Settings > Pages > Deploy from a branch). Cada push na `main` atualiza o site em poucos minutos.
+O site é publicado pelo GitHub Pages por meio do GitHub Actions (`.github/workflows/deploy.yml`). A cada push na `main`, o workflow instala as dependências com `npm ci`, gera a build com `npm run build` e publica a pasta `dist/`. Para ativar, em Settings > Pages, escolha **Source: GitHub Actions**. O workflow também pode ser disparado manualmente na aba Actions.
 
 ## Fluxo de trabalho com Git
 
