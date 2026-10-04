@@ -50,6 +50,23 @@ python -m http.server 8080
 
 Depois, abra http://localhost:8080 no navegador. Com Node.js, o equivalente é `npx serve .`.
 
+## Build de produção
+
+O projeto usa o [Vite](https://vite.dev) para gerar a versão de produção. Pré-requisito: Node.js 20 ou superior.
+
+```bash
+npm install
+npm run build
+npm run preview
+```
+
+- `npm run build` gera a pasta `dist/`, com o JavaScript agrupado em um único arquivo, o CSS e o HTML minificados e os fragmentos de `html/` também minificados (via `html-minifier-terser`). As imagens são copiadas sem alteração.
+- `npm run preview` serve a pasta `dist/` para conferir o resultado.
+- `npm run dev` abre o servidor de desenvolvimento com recarregamento automático.
+- A pasta `dist/` não é versionada (está no `.gitignore`).
+
+Não há testes automatizados neste projeto.
+
 ## Como usar
 
 - **Início:** apresentação da ONG e indicadores de impacto.
