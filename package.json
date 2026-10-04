@@ -1,0 +1,18 @@
+{
+  "name": "ong-esperanca-transformadora",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "SPA da ONG Esperança Transformadora",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "imagens": "node scripts/otimizar-imagens.mjs"
+  },
+  "devDependencies": {
+    "html-minifier-terser": "^7.2.0",
+    "sharp": "^0.35.5",
+    "vite": "^8.3.2"
+  }
+}

@@ -8,7 +8,10 @@ export const modeloBadge = `<span class="badge badge-{{tipo}}">{{texto}}</span>`
 
 export const modeloProjeto = `
 <article class="projeto-card" id="{{id}}">
-  <img src="{{imagem}}" width="{{largura}}" height="{{altura}}" alt="{{alt}}">
+  <picture>
+    <source type="image/webp" srcset="{{imagem}}-400.webp 400w, {{imagem}}.webp 740w" sizes="(min-width: 768px) 50vw, 100vw">
+    <img src="{{imagem}}.jpg" srcset="{{imagem}}-400.jpg 400w, {{imagem}}.jpg 740w" sizes="(min-width: 768px) 50vw, 100vw" width="{{largura}}" height="{{altura}}" loading="lazy" decoding="async" alt="{{alt}}">
+  </picture>
   <div class="projeto-corpo">
     <p class="grupo-componentes">{{{badges}}}</p>
     <h3>{{titulo}}</h3>

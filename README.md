@@ -50,6 +50,35 @@ python -m http.server 8080
 
 Depois, abra http://localhost:8080 no navegador. Com Node.js, o equivalente é `npx serve .`.
 
+## Otimização de imagens
+
+As imagens originais ficam em `imagens-fonte/`. O comando abaixo gera a pasta `imagens/` com versões otimizadas, usando o [sharp](https://sharp.pixelplumbing.com):
+
+```bash
+npm run imagens
+```
+
+- Cada ilustração é exportada em **WebP** (qualidade 78) e em **JPEG** otimizado como alternativa, em duas larguras (400 e 740 px) para as imagens de projetos.
+- O logotipo é reduzido para 96 px e comprimido como PNG de paleta.
+- O HTML usa `<picture>` com `srcset` e `sizes`, para o navegador escolher o arquivo certo, e `loading="lazy"` nas imagens abaixo da dobra.
+
+## Build de produção
+
+O projeto usa o [Vite](https://vite.dev) para gerar a versão de produção. Pré-requisito: Node.js 20 ou superior.
+
+```bash
+npm install
+npm run build
+npm run preview
+```
+
+- `npm run build` gera a pasta `dist/`, com o JavaScript agrupado em um único arquivo, o CSS e o HTML minificados e os fragmentos de `html/` também minificados (via `html-minifier-terser`). As imagens são copiadas sem alteração.
+- `npm run preview` serve a pasta `dist/` para conferir o resultado.
+- `npm run dev` abre o servidor de desenvolvimento com recarregamento automático.
+- A pasta `dist/` não é versionada (está no `.gitignore`).
+
+Não há testes automatizados neste projeto.
+
 ## Como usar
 
 - **Início:** apresentação da ONG e indicadores de impacto.
@@ -65,7 +94,7 @@ Depois, abra http://localhost:8080 no navegador. Com Node.js, o equivalente é `
 
 ## Deploy
 
-O site é publicado pelo GitHub Pages a partir da branch `main`, na raiz do repositório (Settings > Pages > Deploy from a branch). Cada push na `main` atualiza o site em poucos minutos.
+O site é publicado pelo GitHub Pages por meio do GitHub Actions (`.github/workflows/deploy.yml`). A cada push na `main`, o workflow instala as dependências com `npm ci`, gera a build com `npm run build` e publica a pasta `dist/`. Para ativar, em Settings > Pages, escolha **Source: GitHub Actions**. O workflow também pode ser disparado manualmente na aba Actions.
 
 ## Fluxo de trabalho com Git
 
