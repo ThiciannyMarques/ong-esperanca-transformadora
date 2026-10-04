@@ -1,7 +1,7 @@
 export const projetos = [
   {
     id: "educacao",
-    imagem: "imagens/projeto-educacao.jpg",
+    imagem: "imagens/projeto-educacao",
     largura: 740,
     altura: 493,
     alt: "Ilustração de quatro pessoas segurando um livro aberto gigante, um globo terrestre, uma maçã, um lápis e uma pilha de livros",
@@ -17,7 +17,7 @@ export const projetos = [
   },
   {
     id: "prato-cheio",
-    imagem: "imagens/projeto-alimentacao.jpg",
+    imagem: "imagens/projeto-alimentacao",
     largura: 740,
     altura: 518,
     alt: "Ilustração com diversos alimentos: frutas, legumes, massa, pizza, ovo, cereal e outros itens",

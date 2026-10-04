@@ -392,6 +392,11 @@ main > section {
   color: var(--texto-suave);
 }
 
+.hero picture,
+.projeto-card picture {
+  display: block;
+}
+
 .hero img {
   width: 100%;
 }
@@ -1034,7 +1039,7 @@ main:focus {
     grid-column: span 7;
   }
 
-  .hero-inner > img {
+  .hero-inner > picture {
     grid-column: span 5;
   }
 
@@ -1074,7 +1079,7 @@ main:focus {
     grid-column: span 6;
   }
 
-  .hero-inner > img {
+  .hero-inner > picture {
     grid-column: span 6;
   }
 }
